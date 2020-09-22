@@ -15,7 +15,7 @@ docker push localhost:32000/jenkins
 Deploy Jenkins:
 
 ```bash
-cd ../k8s
+cd ../k8s-deploy
 kubectl create ns jenkins
 kubectl apply -f jenkins-deployment.yaml
 kubectl apply -f jenkins-service.yaml
