@@ -1,6 +1,6 @@
 # Kubernetes CI/CD pipeline example with Jenkins
 
-This repo takes from where we left in the [k8s-distributed-example](https://github.com/luigidifraia/k8s-distributed-example) repo and assumes a similar base setup, i.e. using MicroK8s 1.18 with ingress, dns and repository components enabled.
+This repo takes from where we left in the [k8s-distributed-example](https://github.com/luigidifraia/k8s-distributed-example) repo and assumes a similar base setup, i.e. using MicroK8s 1.18 with `ingress`, `dns` and `repository` components enabled.
 
 # TL;DR
 
@@ -42,7 +42,7 @@ Retrieve the password to unlock Jenkins with:
 kubectl -n jenkins exec $(kubectl get pod -n jenkins -l app=jenkins --no-headers -o=custom-columns='DATA:.metadata.name') -- cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-Get the kube config required to create the `kubeconfig` credentials used by the `kubernetes-cd` plugin in Jenkins:
+Get the configuration required to create the `kubeconfig` credentials used by the `kubernetes-cd` plugin in Jenkins:
 
 ```bash
 microk8s config
@@ -50,7 +50,7 @@ microk8s config
 
 The actual config file is stored here: */var/snap/microk8s/current/credentials/client.config*
 
-# Testing
+# Testing CI/CD
 
 The one below is an example of the build process for the project as per [k8s-distributed-example](https://github.com/luigidifraia/k8s-distributed-example) repo.
 
