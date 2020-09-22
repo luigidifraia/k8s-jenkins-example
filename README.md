@@ -175,5 +175,5 @@ Finished: SUCCESS
 
 # Known issues
 
-At the moment the continuous deployment pipeline is failing as per [this issue report](https://github.com/jenkinsci/kubernetes-cd-plugin/issues/134).  In order to address the issue you might want to downgrade the Jackson 2 API plugin to version 2.10.3, available from the archives [here](https://updates.jenkins.io/download/plugins/jackson2-api/).
+At the moment the continuous deployment pipeline is failing as per [this issue report](https://github.com/jenkinsci/kubernetes-cd-plugin/issues/134). In order to address the issue you might want to downgrade the Jackson 2 API plugin to version 2.10.3, available from the archives [here](https://updates.jenkins.io/download/plugins/jackson2-api/).
 
