@@ -7,6 +7,7 @@ This repo takes from where we left in the [k8s-distributed-example](https://gith
 Build the Docker image for Jenkins:
 
 ```bash
+cd docker-build
 docker build -t localhost:32000/jenkins .
 docker push localhost:32000/jenkins
 ```
@@ -14,7 +15,7 @@ docker push localhost:32000/jenkins
 Deploy Jenkins:
 
 ```bash
-cd k8s
+cd ../k8s
 kubectl create ns jenkins
 kubectl apply -f jenkins-deployment.yaml
 kubectl apply -f jenkins-service.yaml
