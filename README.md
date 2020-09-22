@@ -1,3 +1,7 @@
+# Kubernetes CI/CD pipeline example with Jenkins
+
+This repo takes from where we left in the [k8s-distributed-example](https://github.com/luigidifraia/k8s-distributed-example) repo and assumes a similar base setup, i.e. using MicroK8s 1.18 with ingress, dns and repository components enabled.
+
 # TL;DR
 
 Build the Docker image for Jenkins:
