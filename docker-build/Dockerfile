@@ -6,7 +6,7 @@ USER root
 
 # From https://docs.docker.com/engine/install/debian/
 
-# Docker CE installation
+# Docker CE CLI installation
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -22,11 +22,7 @@ RUN add-apt-repository \
     stable"
 
 RUN apt-get update && apt-get install -y \
-    docker-ce \
-    docker-ce-cli \
-    containerd.io
-
-RUN usermod -a -G docker jenkins
+    docker-ce-cli
 
 # From https://kubernetes.io/docs/tasks/tools/install-kubectl/
 

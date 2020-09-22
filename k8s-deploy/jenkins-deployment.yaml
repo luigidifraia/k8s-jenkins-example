@@ -27,6 +27,13 @@ spec:
           mountPath: /var/jenkins_home
         - name: dockersock
           mountPath: "/var/run/docker.sock"
+      initContainers:
+      - name: fix-permissions
+        image: busybox
+        command: ["sh", "-c", "chmod 0666 /var/run/docker.sock"]
+        volumeMounts:
+        - name: dockersock
+          mountPath: "/var/run/docker.sock"
       volumes:
       - name: jenkins-home
         emptyDir: {}
